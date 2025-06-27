@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Weather App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #007bff; margin-bottom: 20px; }
+        p { font-size: 1.1em; margin: 10px 0; }
+        .weather-icon { width: 80px; height: 80px; margin-top: 15px; }
+        .error-message { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Current Weather in {{ city_weather.city }}</h1>
+
+        {% if city_weather.temperature != 'N/A' %}
+            <p><strong>Temperature:</strong> {{ city_weather.temperature }}&deg;C</p>
+            <p><strong>Description:</strong> {{ city_weather.description }}</p>
+            <img class="weather-icon" src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Weather Icon">
+        {% else %}
+            <p class="error-message">{{ city_weather.description }}</p>
+            <p>Please check the city name or your API key.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
