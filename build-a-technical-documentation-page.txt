@@ -1,0 +1,156 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>Web Development Documentation</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#HTML_Basics">HTML Basics</a>
+      <a class="nav-link" href="#CSS_Fundamentals">CSS Fundamentals</a>
+      <a class="nav-link" href="#JavaScript_Overview">JavaScript Overview</a>
+      <a class="nav-link" href="#Key_Concepts">Key Concepts</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>This documentation explains basic web development concepts.</p>
+        <p>It is designed for beginners.</p>
+        <code>console.log("Hello World");</code>
+      </section>
+
+      <section class="main-section" id="HTML_Basics">
+        <header>HTML Basics</header>
+        <p>HTML structures content on the web.</p>
+        <p>Elements are represented using tags.</p>
+        <code>&lt;h1&gt;Heading&lt;/h1&gt;</code>
+      </section>
+
+      <section class="main-section" id="CSS_Fundamentals">
+        <header>CSS Fundamentals</header>
+        <p>CSS controls layout and appearance.</p>
+        <p>It separates design from structure.</p>
+        <code>body { margin: 0; }</code>
+      </section>
+
+      <section class="main-section" id="JavaScript_Overview">
+        <header>JavaScript Overview</header>
+        <p>JavaScript adds interactivity.</p>
+        <p>It runs in the browser.</p>
+        <code>alert("Welcome");</code>
+      </section>
+
+      <section class="main-section" id="Key_Concepts">
+        <header>Key Concepts</header>
+        <p>These concepts are essential.</p>
+        <p>They appear in most programs.</p>
+        <code>let x = 10;</code>
+        <ul>
+          <li>Variables</li>
+          <li>Functions</li>
+          <li>Loops</li>
+          <li>Conditions</li>
+          <li>Events</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+/* ===== Reset / Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar ===== */
+#navbar {
+  background-color: #f4f4f4;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+#navbar header {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.nav-link {
+  display: block;
+  margin: 6px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Main content ===== */
+#main-doc {
+  padding: 20px;
+}
+
+.main-section {
+  margin-bottom: 40px;
+}
+
+.main-section header {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+code {
+  display: block;
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* ===== Desktop layout ===== */
+@media (min-width: 800px) {
+  body {
+    flex-direction: row;
+  }
+
+  #navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+  }
+
+  #main-doc {
+    margin-left: 200px;
+  }
+}
+
+
+** end of styles.css **
+
