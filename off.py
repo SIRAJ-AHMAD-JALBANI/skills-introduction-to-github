@@ -1,0 +1,1 @@
+print("No days off")
